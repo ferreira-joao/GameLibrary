@@ -1,11 +1,17 @@
 import React from "react";
 
-import { Container } from "./styles";
+import { Container, Header } from "./styles";
+
+import logo from "../../assets/game_controller.svg";
 
 const Home: React.FC = () => {
   return (
     <Container>
-      <h1>Home</h1>
+      <Header>
+        <img src={logo} />
+
+        <h1>GameLibrary</h1>
+      </Header>
     </Container>
   );
 };
