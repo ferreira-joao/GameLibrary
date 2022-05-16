@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { colors } from "../../global/theme";
+import { breakpoint, colors } from "../../global/theme";
 
 export const Container = styled.div`
   width: 100vw;
@@ -23,8 +23,9 @@ export const Container = styled.div`
     padding-right: 10px;
     display: flex;
     flex-direction: column;
-    text-align: center;
+    align-items: center;
     justify-content: center;
+    text-align: center;
     z-index: 1;
 
     h1 {
@@ -43,6 +44,7 @@ export const Container = styled.div`
     }
 
     button {
+      width: 100%;
       padding: 8px;
       margin-top: 5px;
       background-color: ${colors.primary};
@@ -51,6 +53,10 @@ export const Container = styled.div`
       font-weight: bold;
       border-radius: 8px;
       transition: 0.5s;
+
+      @media ${breakpoint.md} {
+        width: 300px;
+      }
     }
 
     button:hover {
