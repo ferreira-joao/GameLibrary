@@ -46,7 +46,6 @@ export const Container = styled.div`
     }
 
     button {
-      width: 100%;
       padding: 8px;
       margin-top: 5px;
       background-color: ${colors.primary};
