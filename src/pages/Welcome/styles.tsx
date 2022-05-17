@@ -75,18 +75,20 @@ export const Container = styled.div`
   .image_container {
     @media ${breakpoint.lg} {
       width: 50%;
+      display: flex;
+      align-items: center;
     }
 
     img {
       position: absolute;
       object-fit: cover;
       width: 100%;
-      height: 100%;
+      height: 770px;
       filter: blur(5px);
 
       @media ${breakpoint.lg} {
         filter: blur(0);
-        object-fit: fit;
+        object-fit: contain;
         position: relative;
       }
     }

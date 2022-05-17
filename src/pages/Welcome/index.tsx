@@ -15,7 +15,7 @@ const Welcome: React.FC = () => {
           <span>growing up is a trap!</span>
         </p>
 
-        <button>To the list!</button>
+        <button>To the library!</button>
       </div>
 
       <div className="image_container">
