@@ -4,6 +4,8 @@ import { Container } from "./styles";
 
 import logo from "../../assets/arcade.jpg";
 
+import { Link } from "react-router-dom";
+
 const Welcome: React.FC = () => {
   return (
     <Container>
@@ -15,7 +17,9 @@ const Welcome: React.FC = () => {
           <span>growing up is a trap!</span>
         </p>
 
-        <button>To the library!</button>
+        <Link to={"/home"}>
+          <button>To the library!</button>
+        </Link>
       </div>
 
       <div className="image_container">
