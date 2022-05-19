@@ -5,7 +5,7 @@ import { breakpoint, colors } from "../../global/theme";
 export const Container = styled.div`
   width: 100vw;
   height: 100vh;
-  background-color: ${colors.background};
+  background-color: ${colors.background_second};
 
   .home_header {
     padding: 10px;
@@ -13,7 +13,7 @@ export const Container = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: ${colors.background_secondary};
+    background-color: ${colors.darkblue};
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 
@@ -29,7 +29,6 @@ export const Container = styled.div`
 
   .home_body {
     margin-top: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 0 10px;
   }
 `;

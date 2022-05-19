@@ -6,6 +6,8 @@ import logo from "../../assets/game_controller.svg";
 
 import MainInput from "../../components/MainInput";
 
+import MainCard from "../../components/MainCard";
+
 const Home: React.FC = () => {
   return (
     <Container>
@@ -17,6 +19,8 @@ const Home: React.FC = () => {
 
       <div className="home_body">
         <MainInput />
+
+        <MainCard />
       </div>
     </Container>
   );

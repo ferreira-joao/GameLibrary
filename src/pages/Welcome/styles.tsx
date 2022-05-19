@@ -5,7 +5,7 @@ import { breakpoint, colors } from "../../global/theme";
 export const Container = styled.div`
   width: 100vw;
   height: 100vh;
-  background-color: ${colors.background};
+  background-color: ${colors.darkblue};
 
   @media ${breakpoint.lg} {
     display: flex;
