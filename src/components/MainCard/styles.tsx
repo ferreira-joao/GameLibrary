@@ -24,9 +24,15 @@ export const Container = styled.div`
     color: ${colors.text};
   }
 
-  .metacritic {
+  .icon_score {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  span {
     display: inline-block;
-    padding: 5px;
+    padding: 0 5px;
     border-radius: 8px;
     border: 1px solid ${colors.good_score};
     color: ${colors.good_score};
