@@ -19,6 +19,24 @@ const MainCard: React.FC = () => {
 
         <h3>Título do jogo</h3>
       </div>
+
+      <div className="date_genres">
+        <div className="release_date">
+          <p>Relase date:</p>
+
+          <p>Feb 25, 2022</p>
+        </div>
+
+        <div className="genres">
+          <p>Genres:</p>
+
+          <p>Action, RPG</p>
+        </div>
+      </div>
+
+      <div className="expand_button">
+        <p>View less</p>
+      </div>
     </Container>
   );
 };

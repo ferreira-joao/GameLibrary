@@ -19,11 +19,6 @@ export const Container = styled.div`
     padding: 10px;
   }
 
-  h3 {
-    margin: 5px 0;
-    color: ${colors.text};
-  }
-
   .icon_score {
     display: flex;
     align-items: center;
@@ -36,5 +31,57 @@ export const Container = styled.div`
     border-radius: 8px;
     border: 1px solid ${colors.good_score};
     color: ${colors.good_score};
+  }
+
+  h3 {
+    margin: 5px 0;
+    color: ${colors.text};
+  }
+
+  h3:hover {
+    text-decoration: underline;
+  }
+
+  .date_genres {
+    padding: 0 10px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+      font-size: 14px;
+      color: ${colors.text};
+    }
+
+    .release_date {
+      width: 100%;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #fff;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .genres {
+      width: 100%;
+      padding-bottom: 5px;
+      border-bottom: 1px solid #fff;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  .expand_button {
+    padding-bottom: 5px;
+    text-align: center;
+
+    p {
+      font-size: 12px;
+      color: ${colors.text};
+      text-decoration: underline;
+      cursor: pointer;
+    }
   }
 `;
