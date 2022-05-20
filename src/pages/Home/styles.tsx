@@ -3,8 +3,8 @@ import styled from "styled-components";
 import { breakpoint, colors } from "../../global/theme";
 
 export const Container = styled.div`
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-color: ${colors.background_second};
 
   .home_header {
