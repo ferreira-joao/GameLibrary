@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { Container } from "./styles";
 
@@ -6,6 +6,9 @@ import { renderIconNav } from "../../utils/renderIconNav";
 
 const MainCard: React.FC = () => {
   const consoles = ["playstation", "xbox", "pc"];
+
+  const [toogle, setToogle] = useState(false);
+
   return (
     <Container>
       <div className="photo"></div>
@@ -20,22 +23,26 @@ const MainCard: React.FC = () => {
         <h3>Título do jogo</h3>
       </div>
 
-      <div className="date_genres">
-        <div className="release_date">
-          <p>Relase date:</p>
+      {toogle && (
+        <div className="date_genres">
+          <div className="release_date">
+            <p>Relase date:</p>
 
-          <p>Feb 25, 2022</p>
+            <p>Feb 25, 2022</p>
+          </div>
+
+          <div className="genres">
+            <p>Genres:</p>
+
+            <p>Action, RPG</p>
+          </div>
         </div>
-
-        <div className="genres">
-          <p>Genres:</p>
-
-          <p>Action, RPG</p>
-        </div>
-      </div>
+      )}
 
       <div className="expand_button">
-        <p>View less</p>
+        <div onClick={() => setToogle(!toogle)}>
+          {toogle ? <p>View less</p> : <p>View more</p>}
+        </div>
       </div>
     </Container>
   );

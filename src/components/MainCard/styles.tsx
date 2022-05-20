@@ -16,13 +16,14 @@ export const Container = styled.div`
   }
 
   .information_container {
-    padding: 10px;
+    padding: 0 10px;
   }
 
   .icon_score {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 10px;
   }
 
   span {
@@ -35,6 +36,7 @@ export const Container = styled.div`
 
   h3 {
     margin: 5px 0;
+    cursor: pointer;
     color: ${colors.text};
   }
 
@@ -74,8 +76,10 @@ export const Container = styled.div`
   }
 
   .expand_button {
+    margin-top: 10px;
     padding-bottom: 5px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
 
     p {
       font-size: 12px;
