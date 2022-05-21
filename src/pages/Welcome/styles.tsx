@@ -10,6 +10,7 @@ export const Container = styled.div`
   @media ${breakpoint.lg} {
     display: flex;
     flex-direction: row;
+    padding-left: 40px;
   }
 
   .description {
@@ -82,7 +83,7 @@ export const Container = styled.div`
       position: absolute;
       object-fit: cover;
       width: 100%;
-      height: 770px;
+      height: 100%;
       filter: blur(5px);
 
       @media ${breakpoint.lg} {
