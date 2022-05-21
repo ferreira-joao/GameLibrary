@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors } from "../../global/theme";
+import { breakpoint, colors } from "../../global/theme";
 
 export const Container = styled.div`
   width: 100%;
@@ -13,6 +13,10 @@ export const Container = styled.div`
     height: 150px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+
+    @media ${breakpoint.sm} {
+      height: 180px;
+    }
   }
 
   .information_container {

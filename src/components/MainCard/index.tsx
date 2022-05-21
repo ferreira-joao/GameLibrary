@@ -4,9 +4,21 @@ import { Container } from "./styles";
 
 import { renderIconNav } from "../../utils/renderIconNav";
 
-const MainCard: React.FC = () => {
-  const consoles = ["playstation", "xbox", "pc"];
+interface ICardData {
+  platforms: string[];
+  metacritic: number;
+  name: string;
+  release_date: string;
+  genres: string[];
+}
 
+const MainCard: React.FC<ICardData> = ({
+  platforms,
+  metacritic,
+  name,
+  release_date,
+  genres,
+}) => {
   const [toogle, setToogle] = useState(false);
 
   return (
@@ -15,12 +27,12 @@ const MainCard: React.FC = () => {
 
       <div className="information_container">
         <div className="icon_score">
-          <div className="icons">{consoles.map((e) => renderIconNav(e))}</div>
+          <div className="icons">{platforms.map((e) => renderIconNav(e))}</div>
 
-          <span>90</span>
+          <span>{metacritic}</span>
         </div>
 
-        <h3>Título do jogo</h3>
+        <h3>{name}</h3>
       </div>
 
       {toogle && (
@@ -28,7 +40,7 @@ const MainCard: React.FC = () => {
           <div className="release_date">
             <p>Relase date:</p>
 
-            <p>Feb 25, 2022</p>
+            <p>{release_date}</p>
           </div>
 
           <div className="genres">

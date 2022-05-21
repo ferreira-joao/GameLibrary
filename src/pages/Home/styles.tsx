@@ -27,7 +27,12 @@ export const Container = styled.div`
     }
   }
 
-  .home_body {
+  .input_container {
+    padding: 0 10px;
+    margin-top: 10px;
+  }
+
+  .list_body {
     margin-top: 10px;
     padding: 0 10px;
   }

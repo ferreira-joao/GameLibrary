@@ -7,6 +7,7 @@ import logo from "../../assets/game_controller.svg";
 import MainInput from "../../components/MainInput";
 
 import MainCard from "../../components/MainCard";
+import MainCardList from "../../components/MainCardList";
 
 const Home: React.FC = () => {
   return (
@@ -17,10 +18,12 @@ const Home: React.FC = () => {
         <h1>GameLibrary</h1>
       </div>
 
-      <div className="home_body">
+      <div className="input_container">
         <MainInput />
+      </div>
 
-        <MainCard />
+      <div className="list_body">
+        <MainCardList />
       </div>
     </Container>
   );
