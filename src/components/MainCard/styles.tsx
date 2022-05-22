@@ -6,6 +6,7 @@ export const Container = styled.div`
   margin-top: 10px;
   border-radius: 20px;
   background-color: ${colors.background_third};
+  margin-bottom: auto;
 
   .photo {
     background-color: ${colors.primary};
