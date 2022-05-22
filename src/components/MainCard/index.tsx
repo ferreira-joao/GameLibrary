@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { Container } from "./styles";
+import { Container, Meta } from "./styles";
 
 import { renderIconNav } from "../../utils/renderIconNav";
 
@@ -29,7 +29,7 @@ const MainCard: React.FC<ICardData> = ({
         <div className="icon_score">
           <div className="icons">{platforms.map((e) => renderIconNav(e))}</div>
 
-          <span>{metacritic}</span>
+          <Meta score={metacritic}>{metacritic}</Meta>
         </div>
 
         <h3>{name}</h3>

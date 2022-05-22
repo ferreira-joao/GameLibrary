@@ -26,5 +26,5 @@ export const colors = {
   text: "#fff",
   good_score: "#66ff66",
   medium_score: "#ffb84d",
-  bad_score: "#cc0000",
+  bad_score: "#ff1a1a",
 };

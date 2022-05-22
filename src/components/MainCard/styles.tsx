@@ -1,5 +1,9 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { breakpoint, colors } from "../../global/theme";
+
+interface IMeta {
+  score: number;
+}
 
 export const Container = styled.div`
   width: 100%;
@@ -35,14 +39,6 @@ export const Container = styled.div`
     align-items: center;
     justify-content: space-between;
     margin-top: 10px;
-  }
-
-  span {
-    display: inline-block;
-    padding: 0 5px;
-    border-radius: 8px;
-    border: 1px solid ${colors.good_score};
-    color: ${colors.good_score};
   }
 
   h3 {
@@ -102,4 +98,25 @@ export const Container = styled.div`
       text-decoration: underline;
     }
   }
+`;
+
+export const Meta = styled.span<IMeta>`
+  display: inline-block;
+  padding: 0 5px;
+  border-radius: 8px;
+  ${(props) =>
+    props.score <= 59
+      ? css`
+          color: ${colors.bad_score};
+          border: 1px solid ${colors.bad_score};
+        `
+      : props.score <= 79
+      ? css`
+          color: ${colors.medium_score};
+          border: 1px solid ${colors.medium_score};
+        `
+      : css`
+          color: ${colors.good_score};
+          border: 1px solid ${colors.good_score};
+        `}
 `;
