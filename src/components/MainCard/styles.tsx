@@ -40,9 +40,9 @@ export const Container = styled.div`
   }
 
   h3 {
-    margin: 5px 0;
     cursor: pointer;
     color: ${colors.text};
+    display: inline;
   }
 
   h3:hover {
@@ -51,7 +51,7 @@ export const Container = styled.div`
 
   .date_genres {
     padding: 0 10px;
-    margin-bottom: 5px;
+    margin: 5px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -89,8 +89,11 @@ export const Container = styled.div`
     p {
       font-size: 12px;
       color: ${colors.text};
-      text-decoration: underline;
       cursor: pointer;
+    }
+
+    p:hover {
+      text-decoration: underline;
     }
   }
 `;
