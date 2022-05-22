@@ -4,6 +4,8 @@ import { Container, Meta } from "./styles";
 
 import { renderIconNav } from "../../utils/renderIconNav";
 
+import moment from "moment";
+
 interface ICardData {
   platforms: string[];
   metacritic: number;
@@ -20,32 +22,6 @@ const MainCard: React.FC<ICardData> = ({
   genres,
 }) => {
   const [toogle, setToogle] = useState(false);
-
-  const [fullDate, setFullDate] = useState("");
-
-  useEffect(() => {
-    const month = [
-      "Jan",
-      "Feb",
-      "Mar",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
-    ];
-
-    let d = new Date(release_date.replace(/-/g, "/"));
-
-    let dd = d.getDate();
-    let mm = month[d.getMonth()]; //getMonth() returns 0 to 11
-    let yyyy = d.getFullYear();
-
-    setFullDate(mm + " " + dd + ", " + yyyy);
-  }, []);
 
   return (
     <Container>
@@ -66,7 +42,7 @@ const MainCard: React.FC<ICardData> = ({
           <div className="release_date">
             <p>Relase date:</p>
 
-            <p>{fullDate}</p>
+            <p>{moment(release_date).format("MMM DD" + ", " + "YYYY")}</p>
           </div>
 
           <div className="genres">

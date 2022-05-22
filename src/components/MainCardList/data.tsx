@@ -4,7 +4,7 @@ export const games = [
     platforms: ["playstation", "pc", "xbox"],
     metacritic: 80,
     name: "Jogo A",
-    release_date: "2022-01-20",
+    release_date: "2022-10-20",
     genres: ["Action", "RPG"],
   },
   {
