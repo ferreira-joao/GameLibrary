@@ -4,7 +4,7 @@ export const games = [
     platforms: ["playstation", "pc", "xbox"],
     metacritic: 80,
     name: "Jogo A",
-    release_date: "Feb 25, 2022",
+    release_date: "2022-01-20",
     genres: ["Action", "RPG"],
   },
   {
@@ -12,7 +12,7 @@ export const games = [
     platforms: ["playstation"],
     metacritic: 50,
     name: "Jogo B",
-    release_date: "Apr 10, 2022",
+    release_date: "2019-11-15",
     genres: ["RPG"],
   },
   {
@@ -20,7 +20,7 @@ export const games = [
     platforms: ["pc", "xbox"],
     metacritic: 30,
     name: "Jogo C",
-    release_date: "Jan 25, 2022",
+    release_date: "2021-12-01",
     genres: ["Action", "Puzzle"],
   },
   {
@@ -28,7 +28,7 @@ export const games = [
     platforms: ["xbox"],
     metacritic: 70,
     name: "Jogo D",
-    release_date: "May 10, 2022",
+    release_date: "2020-05-30",
     genres: ["Action", "RPG"],
   },
   {
@@ -36,7 +36,7 @@ export const games = [
     platforms: ["playstation", "pc", "xbox"],
     metacritic: 10,
     name: "Jogo E",
-    release_date: "Dez 2, 2022",
+    release_date: "2022-10-15",
     genres: ["Action", "RPG"],
   },
   {
@@ -44,7 +44,7 @@ export const games = [
     platforms: ["nintendo", "xbox"],
     metacritic: 30,
     name: "Jogo F",
-    release_date: "Dez 9, 2022",
+    release_date: "2021-01-17",
     genres: ["Action", "RPG"],
   },
 ];

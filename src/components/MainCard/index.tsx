@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { Container, Meta } from "./styles";
 
@@ -21,6 +21,32 @@ const MainCard: React.FC<ICardData> = ({
 }) => {
   const [toogle, setToogle] = useState(false);
 
+  const [fullDate, setFullDate] = useState("");
+
+  useEffect(() => {
+    const month = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ];
+
+    let d = new Date(release_date.replace(/-/g, "/"));
+
+    let dd = d.getDate();
+    let mm = month[d.getMonth()]; //getMonth() returns 0 to 11
+    let yyyy = d.getFullYear();
+
+    setFullDate(mm + " " + dd + ", " + yyyy);
+  }, []);
+
   return (
     <Container>
       <div className="photo"></div>
@@ -40,7 +66,7 @@ const MainCard: React.FC<ICardData> = ({
           <div className="release_date">
             <p>Relase date:</p>
 
-            <p>{release_date}</p>
+            <p>{fullDate}</p>
           </div>
 
           <div className="genres">
