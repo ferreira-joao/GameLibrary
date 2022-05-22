@@ -7,7 +7,9 @@ import { RiSearch2Line } from "react-icons/ri";
 const MainInput: React.FC = () => {
   return (
     <Container>
-      <RiSearch2Line size={20} style={{ color: "#000" }} />
+      <div className="icon_container">
+        <RiSearch2Line size={20} style={{ color: "#FFF" }} />
+      </div>
 
       <input type="text" placeholder="Search a game..." />
     </Container>
