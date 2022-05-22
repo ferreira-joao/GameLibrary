@@ -6,7 +6,14 @@ export const Container = styled.div`
   padding-bottom: 20px;
   background-color: ${colors.background_second};
 
+  @media ${breakpoint.lg} {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .home_header {
+    width: 100%;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -34,5 +41,9 @@ export const Container = styled.div`
   .list_body {
     margin-top: 10px;
     padding: 0 10px;
+
+    @media ${breakpoint.lg} {
+      width: 80%;
+    }
   }
 `;

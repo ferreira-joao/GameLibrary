@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { breakpoint } from "../../global/theme";
+
 export const Container = styled.div`
   display: flex;
   align-items: center;
@@ -11,6 +13,10 @@ export const Container = styled.div`
     border: 1px solid #eee;
     border-radius: 8px;
     transition: 0.2s;
+
+    @media ${breakpoint.lg} {
+      width: 300px;
+    }
   }
 
   input:focus {
