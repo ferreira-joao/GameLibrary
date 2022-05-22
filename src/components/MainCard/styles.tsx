@@ -7,9 +7,15 @@ export const Container = styled.div`
   border-radius: 20px;
   background-color: ${colors.background_third};
   margin-bottom: auto;
+  transition: 0.3s;
+
+  &:hover {
+    transform: translateY(-7px);
+    box-shadow: rgba(190, 39, 110, 1) 0px 3px 8px;
+  }
 
   .photo {
-    background-color: ${colors.primary};
+    background-color: ${colors.darkblue};
     width: 100%;
     height: 150px;
     border-top-left-radius: 20px;
