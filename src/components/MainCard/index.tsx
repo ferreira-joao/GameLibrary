@@ -7,7 +7,7 @@ import { renderIconNav } from "../../utils/renderIconNav";
 import moment from "moment";
 
 interface ICardData {
-  platforms: string[];
+  platforms: { platform: { id: number; slug: string } }[];
   metacritic: number;
   name: string;
   release_date: string;
@@ -29,7 +29,11 @@ const MainCard: React.FC<ICardData> = ({
 
       <div className="information_container">
         <div className="icon_score">
-          <div className="icons">{platforms.map((e) => renderIconNav(e))}</div>
+          <div className="icons">
+            {platforms.map((e, i) => (
+              <span key={i}>{renderIconNav(e.platform.slug)}</span>
+            ))}
+          </div>
 
           <Meta score={metacritic}>{metacritic}</Meta>
         </div>
@@ -49,8 +53,8 @@ const MainCard: React.FC<ICardData> = ({
             <p>Genres:</p>
 
             <div className="genre_container">
-              {genres.map((e) => (
-                <p key={e.id}>{e.name}</p>
+              {genres.map((e, i) => (
+                <p key={i}>{e.name}</p>
               ))}
             </div>
           </div>

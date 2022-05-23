@@ -9,9 +9,9 @@ import { games } from "./data";
 const MainCardList: React.FC = () => {
   return (
     <List>
-      {games.map((e) => (
+      {games.map((e, i) => (
         <MainCard
-          key={e.id}
+          key={i}
           platforms={e.platforms}
           metacritic={e.metacritic}
           name={e.name}
