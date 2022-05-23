@@ -4,7 +4,6 @@ import { breakpoint, colors } from "../../global/theme";
 
 export const Container = styled.div`
   padding-bottom: 20px;
-  background-color: ${colors.background_second};
 
   @media ${breakpoint.lg} {
     display: flex;
