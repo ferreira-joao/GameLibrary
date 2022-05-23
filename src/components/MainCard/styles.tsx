@@ -79,6 +79,14 @@ export const Container = styled.div`
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+
+      .genre_container {
+        margin-left: 10px;
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        flex-wrap: wrap;
+      }
     }
   }
 

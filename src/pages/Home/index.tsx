@@ -6,7 +6,6 @@ import logo from "../../assets/game_controller.svg";
 
 import MainInput from "../../components/MainInput";
 
-import MainCard from "../../components/MainCard";
 import MainCardList from "../../components/MainCardList";
 
 const Home: React.FC = () => {

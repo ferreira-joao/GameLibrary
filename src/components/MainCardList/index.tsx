@@ -16,6 +16,7 @@ const MainCardList: React.FC = () => {
           metacritic={e.metacritic}
           name={e.name}
           release_date={e.release_date}
+          genres={e.genres}
         />
       ))}
     </List>

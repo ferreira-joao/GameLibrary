@@ -11,7 +11,7 @@ interface ICardData {
   metacritic: number;
   name: string;
   release_date: string;
-  genres: string[];
+  genres: { id: number; name: string }[];
 }
 
 const MainCard: React.FC<ICardData> = ({
@@ -48,7 +48,11 @@ const MainCard: React.FC<ICardData> = ({
           <div className="genres">
             <p>Genres:</p>
 
-            <p>Action, RPG</p>
+            <div className="genre_container">
+              {genres.map((e) => (
+                <p key={e.id}>{e.name}</p>
+              ))}
+            </div>
           </div>
         </div>
       )}
