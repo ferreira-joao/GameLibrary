@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import { Container } from "./styles";
 
@@ -8,7 +8,25 @@ import MainInput from "../../components/MainInput";
 
 import MainCardList from "../../components/MainCardList";
 
+import { getGames } from "../../services/apiCalls";
+
 const Home: React.FC = () => {
+  const [games, setGames] = useState<[]>([]);
+
+  const handleGet = async () => {
+    const games = await getGames();
+
+    setGames(games);
+  };
+
+  useEffect(() => {
+    handleGet();
+  }, []);
+
+  useEffect(() => {
+    console.log(games);
+  }, [games]);
+
   return (
     <Container>
       <div className="home_header">
