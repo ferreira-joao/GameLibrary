@@ -7,6 +7,7 @@ import { renderIconNav } from "../../utils/renderIconNav";
 import moment from "moment";
 
 interface ICardData {
+  photo: string;
   platforms: { platform: { id: number; slug: string } }[];
   metacritic: number;
   name: string;
@@ -15,6 +16,7 @@ interface ICardData {
 }
 
 const MainCard: React.FC<ICardData> = ({
+  photo,
   platforms,
   metacritic,
   name,
@@ -25,7 +27,7 @@ const MainCard: React.FC<ICardData> = ({
 
   return (
     <Container>
-      <div className="photo"></div>
+      <img src={photo} className="photo" />
 
       <div className="information_container">
         <div className="icon_score">

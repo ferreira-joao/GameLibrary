@@ -23,10 +23,6 @@ const Home: React.FC = () => {
     handleGet();
   }, []);
 
-  useEffect(() => {
-    console.log(games);
-  }, [games]);
-
   return (
     <Container>
       <div className="home_header">
@@ -40,7 +36,7 @@ const Home: React.FC = () => {
       </div>
 
       <div className="list_body">
-        <MainCardList />
+        <MainCardList data={games} />
       </div>
     </Container>
   );
