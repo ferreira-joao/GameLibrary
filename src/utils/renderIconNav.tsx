@@ -3,7 +3,10 @@ import {
   SiXbox,
   SiNintendo,
   SiPcgamingwiki,
+  SiAndroid,
+  SiIos,
   SiApple,
+  SiLinux,
   SiApplearcade,
 } from "react-icons/si";
 
@@ -21,8 +24,14 @@ export function renderIconNav(console: string) {
       return (
         <SiPcgamingwiki size={20} color="#FFF" style={{ marginRight: 5 }} />
       );
+    case "android":
+      return <SiAndroid size={20} color="#FFF" style={{ marginRight: 5 }} />;
+    case "ios":
+      return <SiIos size={20} color="#FFF" style={{ marginRight: 5 }} />;
     case "mac":
       return <SiApple size={20} color="#FFF" style={{ marginRight: 5 }} />;
+    case "linux":
+      return <SiLinux size={20} color="#FFF" style={{ marginRight: 5 }} />;
     default:
       return (
         <SiApplearcade size={20} color="#FFF" style={{ marginRight: 5 }} />
