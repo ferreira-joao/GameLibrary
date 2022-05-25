@@ -32,6 +32,14 @@ export const Container = styled.div`
     }
   }
 
+  .home_icon {
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .input_container {
     padding: 0 10px;
     margin-top: 10px;
