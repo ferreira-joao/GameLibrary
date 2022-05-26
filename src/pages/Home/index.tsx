@@ -14,19 +14,37 @@ import LoadingSpinner from "../../components/LoadingSpinner";
 
 const Home: React.FC = () => {
   const [games, setGames] = useState<[]>([]);
+
   const [loading, setLoading] = useState(true);
 
+  const [text, setText] = useState("");
+
   const handleGet = async () => {
-    const games = await getGames();
+    const games = await getGames(text);
 
     setGames(games);
 
     setLoading(false);
   };
 
+  const handleChange = (e: string) => {
+    setText(e);
+  };
+
   useEffect(() => {
     handleGet();
   }, []);
+
+  //api call only with two or zero letters on input
+  useEffect(() => {
+    if (text.length >= 2 || text.length <= 0) {
+      const timer = setTimeout(() => {
+        handleGet();
+      }, 300); //delay the search to wait for the user stop typing
+
+      return () => clearTimeout(timer);
+    }
+  }, [text]);
 
   return (
     <Container>
@@ -43,7 +61,7 @@ const Home: React.FC = () => {
       ) : (
         <>
           <div className="input_container">
-            <MainInput />
+            <MainInput value={text} change={(e) => handleChange(e)} />
           </div>
 
           <div className="list_body">
