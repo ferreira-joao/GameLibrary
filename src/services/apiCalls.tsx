@@ -4,7 +4,7 @@ const env = import.meta.env.VITE_API_KEY;
 
 export const getGames = (search: string) => {
   return api
-    .get(`/api/games?key=${env}&page_size=16&search=${search}`)
+    .get(`/api/games?key=${env}&page_size=21&search=${search}`)
     .then((res) => {
       return res.data.results;
     })

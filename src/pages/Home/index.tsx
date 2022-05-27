@@ -64,9 +64,13 @@ const Home: React.FC = () => {
             <MainInput value={text} change={(e) => handleChange(e)} />
           </div>
 
-          <div className="list_body">
-            <MainCardList data={games} />
-          </div>
+          {games.length === 0 ? (
+            <h3 className="zero_games">NO GAMES FOUND :(</h3>
+          ) : (
+            <div className="list_body">
+              <MainCardList data={games} />
+            </div>
+          )}
         </>
       )}
     </Container>

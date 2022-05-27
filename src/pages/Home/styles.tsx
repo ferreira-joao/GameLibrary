@@ -45,6 +45,11 @@ export const Container = styled.div`
     margin-top: 10px;
   }
 
+  .zero_games {
+    color: #fff;
+    margin-top: 30px;
+  }
+
   .list_body {
     margin-top: 10px;
     padding: 0 10px;
