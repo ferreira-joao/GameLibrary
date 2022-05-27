@@ -7,6 +7,8 @@ import {
   SiIos,
   SiApple,
   SiLinux,
+  SiSega,
+  SiAtari,
   SiApplearcade,
 } from "react-icons/si";
 
@@ -32,6 +34,10 @@ export function renderIconNav(console: string) {
       return <SiApple size={20} color="#FFF" style={{ marginRight: 5 }} />;
     case "linux":
       return <SiLinux size={20} color="#FFF" style={{ marginRight: 5 }} />;
+    case "sega":
+      return <SiSega size={20} color="#FFF" style={{ marginRight: 5 }} />;
+    case "atari":
+      return <SiAtari size={20} color="#FFF" style={{ marginRight: 5 }} />;
     default:
       return (
         <SiApplearcade size={20} color="#FFF" style={{ marginRight: 5 }} />

@@ -48,6 +48,7 @@ export const Container = styled.div`
   .zero_games {
     color: #fff;
     margin-top: 30px;
+    text-align: center;
   }
 
   .list_body {
