@@ -9,7 +9,7 @@ export const Container = styled.div`
   width: 100%;
   margin-top: 10px;
   border-radius: 20px;
-  background-color: ${colors.background_third};
+  background-color: ${colors.background_second};
   margin-bottom: auto;
   transition: 0.3s;
 

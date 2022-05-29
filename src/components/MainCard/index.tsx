@@ -6,6 +6,8 @@ import { renderIconNav } from "../../utils/renderIconNav";
 
 import moment from "moment";
 
+import { Link } from "react-router-dom";
+
 interface ICardData {
   photo: string;
   platforms: { platform: { id: number; slug: string } }[];
@@ -40,7 +42,9 @@ const MainCard: React.FC<ICardData> = ({
           <Meta score={metacritic}>{metacritic}</Meta>
         </div>
 
-        <h3>{name}</h3>
+        <Link to={"/details"} style={{ textDecoration: "none" }}>
+          <h3>{name}</h3>
+        </Link>
       </div>
 
       {toogle && (

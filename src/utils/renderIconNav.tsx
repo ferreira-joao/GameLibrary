@@ -16,31 +16,31 @@ export function renderIconNav(console: string) {
   switch (console) {
     case "playstation":
       return (
-        <SiPlaystation size={20} color="#FFF" style={{ marginRight: 5 }} />
+        <SiPlaystation size={15} color="#FFF" style={{ marginRight: 5 }} />
       );
     case "xbox":
-      return <SiXbox size={20} color="#FFF" style={{ marginRight: 5 }} />;
+      return <SiXbox size={15} color="#FFF" style={{ marginRight: 5 }} />;
     case "nintendo":
-      return <SiNintendo size={20} color="#FFF" style={{ marginRight: 5 }} />;
+      return <SiNintendo size={15} color="#FFF" style={{ marginRight: 5 }} />;
     case "pc":
       return (
-        <SiPcgamingwiki size={20} color="#FFF" style={{ marginRight: 5 }} />
+        <SiPcgamingwiki size={15} color="#FFF" style={{ marginRight: 5 }} />
       );
     case "android":
-      return <SiAndroid size={20} color="#FFF" style={{ marginRight: 5 }} />;
+      return <SiAndroid size={15} color="#FFF" style={{ marginRight: 5 }} />;
     case "ios":
-      return <SiIos size={20} color="#FFF" style={{ marginRight: 5 }} />;
+      return <SiIos size={15} color="#FFF" style={{ marginRight: 5 }} />;
     case "mac":
-      return <SiApple size={20} color="#FFF" style={{ marginRight: 5 }} />;
+      return <SiApple size={15} color="#FFF" style={{ marginRight: 5 }} />;
     case "linux":
-      return <SiLinux size={20} color="#FFF" style={{ marginRight: 5 }} />;
+      return <SiLinux size={15} color="#FFF" style={{ marginRight: 5 }} />;
     case "sega":
-      return <SiSega size={20} color="#FFF" style={{ marginRight: 5 }} />;
+      return <SiSega size={15} color="#FFF" style={{ marginRight: 5 }} />;
     case "atari":
-      return <SiAtari size={20} color="#FFF" style={{ marginRight: 5 }} />;
+      return <SiAtari size={15} color="#FFF" style={{ marginRight: 5 }} />;
     default:
       return (
-        <SiApplearcade size={20} color="#FFF" style={{ marginRight: 5 }} />
+        <SiApplearcade size={15} color="#FFF" style={{ marginRight: 5 }} />
       );
   }
 }
