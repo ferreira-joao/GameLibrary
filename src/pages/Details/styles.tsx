@@ -56,5 +56,10 @@ export const DetailsBody = styled.div`
       color: ${colors.text};
       text-transform: uppercase;
     }
+
+    h2 {
+      text-align: center;
+      color: ${colors.text};
+    }
   }
 `;

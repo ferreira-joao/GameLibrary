@@ -6,6 +6,8 @@ import logo from "../../assets/game_controller.svg";
 
 import { renderIconNav } from "../../utils/renderIconNav";
 
+import PhotoSwiper from "../../components/PhotoSwiper";
+
 const Details: React.FC = () => {
   const platforms = [
     "playstation",
@@ -44,7 +46,9 @@ const Details: React.FC = () => {
             <p className="playtime">average playtime: 72 hours</p>
           </div>
 
-          <h1>Grand Theft Auto</h1>
+          <h2>Grand Theft Auto</h2>
+
+          <PhotoSwiper />
         </div>
       </DetailsBody>
     </Container>
