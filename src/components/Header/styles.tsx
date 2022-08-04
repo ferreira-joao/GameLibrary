@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { colors } from "../../global/theme";
+import { breakpoint, colors } from "../../global/theme";
 
 export const HeaderContainer = styled.div`
   width: 100%;
@@ -14,11 +14,16 @@ export const HeaderContainer = styled.div`
   border-bottom-right-radius: 10px;
 
   img {
-    width: 100px;
-    height: 100px;
+    display: none;
+
+    @media ${breakpoint.md} {
+      display: block;
+      width: 100px;
+      height: 100px;
+    }
   }
 
-  h1 {
+  h2 {
     color: ${colors.text};
   }
 `;

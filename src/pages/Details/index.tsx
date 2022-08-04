@@ -2,8 +2,6 @@ import React from "react";
 
 import { Container, DetailsBody } from "./styles";
 
-import logo from "../../assets/game_controller.svg";
-
 import { renderIconNav } from "../../utils/renderIconNav";
 
 import Header from "../../components/Header";

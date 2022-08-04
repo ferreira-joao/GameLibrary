@@ -9,7 +9,7 @@ const Header: React.FC = () => {
     <HeaderContainer>
       <img src={logo} />
 
-      <h1>GameLibrary</h1>
+      <h2>GameLibrary</h2>
     </HeaderContainer>
   );
 };

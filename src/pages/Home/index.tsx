@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 
 import { Container } from "./styles";
 
-import logo from "../../assets/game_controller.svg";
-
 import Header from "../../components/Header";
 
 import MainInput from "../../components/MainInput";
