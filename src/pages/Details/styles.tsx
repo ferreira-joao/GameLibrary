@@ -53,7 +53,7 @@ export const DetailsBody = styled.div`
     }
 
     .playtime {
-      color: ${colors.text};
+      color: ${colors.primary};
       text-transform: uppercase;
     }
 
@@ -61,5 +61,20 @@ export const DetailsBody = styled.div`
       text-align: center;
       color: ${colors.text};
     }
+  }
+`;
+
+export const GameDetails = styled.div`
+  padding: 0 10px;
+  text-align: left;
+
+  h3 {
+    color: ${colors.text};
+  }
+
+  p {
+    line-height: 19.5px;
+    font-size: 13px;
+    color: ${colors.text};
   }
 `;

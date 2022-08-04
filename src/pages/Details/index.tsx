@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Container, DetailsBody } from "./styles";
+import { Container, DetailsBody, GameDetails } from "./styles";
 
 import { renderIconNav } from "../../utils/renderIconNav";
 
@@ -45,6 +45,17 @@ const Details: React.FC = () => {
           <h2>Grand Theft Auto</h2>
 
           <PhotoSwiper />
+
+          <GameDetails>
+            <h3>About</h3>
+
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Asperiores dicta perspiciatis reprehenderit, soluta aut eos
+              tenetur sed debitis alias molestias corporis ex est temporibus
+              explicabo? Pariatur, neque. Illum, est dolorem?
+            </p>
+          </GameDetails>
         </div>
       </DetailsBody>
     </Container>
