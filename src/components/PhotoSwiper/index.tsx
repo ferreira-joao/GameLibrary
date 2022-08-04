@@ -18,6 +18,8 @@ const PhotoSwiper: React.FC = () => {
         hide: true,
       }}
       modules={[Scrollbar]}
+      spaceBetween={20}
+      style={{ padding: 10 }}
     >
       {items.map((item, i) => (
         <SwiperSlide key={i}>

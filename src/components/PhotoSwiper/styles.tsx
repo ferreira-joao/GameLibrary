@@ -5,7 +5,7 @@ import { colors } from "../../global/theme";
 export const Container = styled.div`
   width: 100%;
   height: 150px;
-  border-radius: 20px;
+  border-radius: 10px;
   background-color: ${colors.darkblue};
 
   p {
