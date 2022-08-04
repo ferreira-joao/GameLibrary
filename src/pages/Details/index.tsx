@@ -6,6 +6,8 @@ import logo from "../../assets/game_controller.svg";
 
 import { renderIconNav } from "../../utils/renderIconNav";
 
+import Header from "../../components/Header";
+
 import PhotoSwiper from "../../components/PhotoSwiper";
 
 const Details: React.FC = () => {
@@ -24,11 +26,7 @@ const Details: React.FC = () => {
 
   return (
     <Container>
-      <div className="details_header">
-        <img src={logo} />
-
-        <h1>GameLibrary</h1>
-      </div>
+      <Header />
 
       <DetailsBody>
         <div className="details_content">

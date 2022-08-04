@@ -4,6 +4,8 @@ import { Container } from "./styles";
 
 import logo from "../../assets/game_controller.svg";
 
+import Header from "../../components/Header";
+
 import MainInput from "../../components/MainInput";
 
 import MainCardList from "../../components/MainCardList";
@@ -48,11 +50,7 @@ const Home: React.FC = () => {
 
   return (
     <Container>
-      <div className="home_header">
-        <img src={logo} />
-
-        <h1>GameLibrary</h1>
-      </div>
+      <Header />
 
       {loading ? (
         <div className="home_icon">
