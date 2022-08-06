@@ -56,6 +56,37 @@ const Details: React.FC = () => {
               explicabo? Pariatur, neque. Illum, est dolorem?
             </p>
           </GameDetails>
+
+          <GameDetails>
+            <h3>Genres</h3>
+
+            <ul>
+              <li>Adventure</li>
+              <li>Action</li>
+              <li>Singleplayer</li>
+              <li>Atmospheric</li>
+            </ul>
+          </GameDetails>
+
+          <GameDetails>
+            <h3>Platforms</h3>
+
+            <ul>
+              <li>Playstation 5</li>
+              <li>Xbox Series S/X</li>
+              <li>PC</li>
+              <li>Xbox 360</li>
+            </ul>
+          </GameDetails>
+
+          <GameDetails>
+            <h3>Ratings</h3>
+
+            <p>Exceptional: 50</p>
+            <p>Recommended: 50</p>
+            <p>Meh: 50</p>
+            <p>Skip: 50</p>
+          </GameDetails>
         </div>
       </DetailsBody>
     </Container>

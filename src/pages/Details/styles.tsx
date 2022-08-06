@@ -65,16 +65,26 @@ export const DetailsBody = styled.div`
 `;
 
 export const GameDetails = styled.div`
-  padding: 0 10px;
+  padding: 5px 10px;
   text-align: left;
 
   h3 {
-    color: ${colors.text};
+    color: ${colors.subtitle};
   }
 
   p {
     line-height: 19.5px;
     font-size: 13px;
     color: ${colors.text};
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  li {
+    font-size: 14px;
+    color: ${colors.text};
+    text-decoration: underline;
   }
 `;

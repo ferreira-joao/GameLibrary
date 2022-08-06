@@ -23,6 +23,7 @@ export const colors = {
   darkblue: "#00001a",
   background_second: "#262626",
   text: "#fff",
+  subtitle: "#a6a6a6",
   good_score: "#66ff66",
   medium_score: "#ffb84d",
   bad_score: "#ff1a1a",
