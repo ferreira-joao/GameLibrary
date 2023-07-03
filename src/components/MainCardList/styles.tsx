@@ -1,5 +1,4 @@
 import styled from "styled-components";
-
 import { breakpoint } from "../../global/theme";
 
 export const List = styled.ul`

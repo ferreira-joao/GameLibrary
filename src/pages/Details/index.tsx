@@ -1,11 +1,7 @@
 import React from "react";
-
 import { Container, DetailsBody, GameDetails } from "./styles";
-
 import { renderIconNav } from "../../utils/renderIconNav";
-
 import Header from "../../components/Header";
-
 import PhotoSwiper from "../../components/PhotoSwiper";
 
 const Details: React.FC = () => {

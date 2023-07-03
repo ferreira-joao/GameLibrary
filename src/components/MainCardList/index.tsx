@@ -1,7 +1,5 @@
 import React from "react";
-
 import MainCard from "../MainCard";
-
 import { List } from "./styles";
 
 interface IData {

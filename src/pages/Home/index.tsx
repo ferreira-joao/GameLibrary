@@ -1,15 +1,9 @@
 import React, { useState, useEffect } from "react";
-
 import { Container } from "./styles";
-
 import Header from "../../components/Header";
-
 import MainInput from "../../components/MainInput";
-
 import MainCardList from "../../components/MainCardList";
-
 import { getGames } from "../../services/apiCalls";
-
 import LoadingSpinner from "../../components/LoadingSpinner";
 
 const Home: React.FC = () => {

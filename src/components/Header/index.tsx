@@ -1,7 +1,5 @@
 import React from "react";
-
 import { HeaderContainer } from "./styles";
-
 import logo from "../../assets/game_controller.svg";
 
 const Header: React.FC = () => {

@@ -1,9 +1,6 @@
 import React from "react";
-
 import { Container } from "./styles";
-
 import logo from "../../assets/arcade.jpg";
-
 import { Link } from "react-router-dom";
 
 const Welcome: React.FC = () => {

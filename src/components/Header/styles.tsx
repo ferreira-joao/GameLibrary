@@ -1,5 +1,4 @@
 import styled from "styled-components";
-
 import { breakpoint, colors } from "../../global/theme";
 
 export const HeaderContainer = styled.div`

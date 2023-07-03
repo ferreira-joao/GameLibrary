@@ -1,7 +1,5 @@
 import React from "react";
-
 import { Spinner } from "./styles";
-
 import { ImSpinner9 } from "react-icons/im";
 
 interface ISpinner {

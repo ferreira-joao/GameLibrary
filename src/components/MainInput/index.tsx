@@ -1,7 +1,5 @@
 import React from "react";
-
 import { Container } from "./styles";
-
 import { RiSearch2Line } from "react-icons/ri";
 
 interface IMainInput {

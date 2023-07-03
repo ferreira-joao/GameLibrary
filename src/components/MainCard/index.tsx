@@ -1,11 +1,7 @@
-import React, { useEffect, useState } from "react";
-
+import React, { useState } from "react";
 import { Container, Meta } from "./styles";
-
 import { renderIconNav } from "../../utils/renderIconNav";
-
 import moment from "moment";
-
 import { Link } from "react-router-dom";
 
 interface ICardData {
