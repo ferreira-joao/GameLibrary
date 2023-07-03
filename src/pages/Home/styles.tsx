@@ -59,3 +59,20 @@ export const Container = styled.div`
     }
   }
 `;
+
+export const MainButton = styled.button`
+  width: 100%;
+  padding: 16px;
+  font-size: 16px;
+  border-radius: 20px;
+  margin-top: 16px;
+  border: 1px solid ${colors.primary};
+  background-color: ${colors.primary};
+  color: #fff;
+  cursor: pointer;
+  transition: 0.5s;
+
+  &:hover {
+    opacity: 0.5;
+  }
+`;

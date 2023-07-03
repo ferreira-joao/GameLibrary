@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Container } from "./styles";
+import { Container, MainButton } from "./styles";
 import Header from "../../components/Header";
 import MainInput from "../../components/MainInput";
 import MainCardList from "../../components/MainCardList";
@@ -11,7 +11,10 @@ const Home: React.FC = () => {
 
   const [loading, setLoading] = useState(true);
 
+  const [loadingButton, setLoadingButton] = useState(false);
+
   const [text, setText] = useState("");
+
   const [size, setSize] = useState(20);
 
   const handleGet = async () => {
@@ -60,6 +63,14 @@ const Home: React.FC = () => {
           ) : (
             <div className="list_body">
               <MainCardList data={games} />
+
+              {loadingButton ? (
+                <MainButton>
+                  <LoadingSpinner size={16} color={"#FFF"} />
+                </MainButton>
+              ) : (
+                <MainButton>View more</MainButton>
+              )}
             </div>
           )}
         </>
