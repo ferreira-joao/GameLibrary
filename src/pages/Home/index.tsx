@@ -18,11 +18,18 @@ const Home: React.FC = () => {
   const [size, setSize] = useState(20);
 
   const handleGet = async () => {
+    setLoadingButton(true);
+
     const games = await getGames(text, size);
 
     setGames(games);
 
+    setLoadingButton(false);
     setLoading(false);
+  };
+
+  const handleGetMore = () => {
+    setSize(size + 5);
   };
 
   const handleChange = (e: string) => {
@@ -31,7 +38,7 @@ const Home: React.FC = () => {
 
   useEffect(() => {
     handleGet();
-  }, []);
+  }, [size]);
 
   //api call only with two or zero letters on input
   useEffect(() => {
@@ -69,7 +76,7 @@ const Home: React.FC = () => {
                   <LoadingSpinner size={16} color={"#FFF"} />
                 </MainButton>
               ) : (
-                <MainButton>View more</MainButton>
+                <MainButton onClick={handleGetMore}>View more</MainButton>
               )}
             </div>
           )}
