@@ -18,9 +18,10 @@ const Home: React.FC = () => {
   const [loading, setLoading] = useState(true);
 
   const [text, setText] = useState("");
+  const [size, setSize] = useState(20);
 
   const handleGet = async () => {
-    const games = await getGames(text);
+    const games = await getGames(text, size);
 
     setGames(games);
 
