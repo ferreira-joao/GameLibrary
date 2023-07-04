@@ -30,9 +30,13 @@ const MainCard: React.FC<ICardData> = ({
       <div className="information_container">
         <div className="icon_score">
           <div className="icons">
-            {platforms.map((e, i) => (
-              <span key={i}>{renderIconNav(e.platform.slug)}</span>
-            ))}
+            {platforms ? (
+              platforms.map((e, i) => (
+                <span key={i}>{renderIconNav(e.platform.slug)}</span>
+              ))
+            ) : (
+              <span style={{ fontWeight: "bold", color: "#fff" }}>-</span>
+            )}
           </div>
 
           <Meta score={metacritic}>{metacritic}</Meta>
@@ -55,9 +59,11 @@ const MainCard: React.FC<ICardData> = ({
             <p>Genres:</p>
 
             <div className="genre_container">
-              {genres.map((e, i) => (
-                <p key={i}>{e.name}</p>
-              ))}
+              {genres ? (
+                genres.map((e, i) => <p key={i}>{e.name}</p>)
+              ) : (
+                <p style={{ fontWeight: "bold", color: "#fff" }}>-</p>
+              )}
             </div>
           </div>
         </div>
