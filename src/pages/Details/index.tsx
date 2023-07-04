@@ -78,6 +78,7 @@ const Details: React.FC = () => {
           <GameDetails>
             <h3>Ratings</h3>
 
+            <p>Total: 50</p>
             <p>Exceptional: 50</p>
             <p>Recommended: 50</p>
             <p>Meh: 50</p>

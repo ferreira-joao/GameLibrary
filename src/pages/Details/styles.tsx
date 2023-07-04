@@ -84,6 +84,5 @@ export const GameDetails = styled.div`
   li {
     font-size: 14px;
     color: ${colors.text};
-    text-decoration: underline;
   }
 `;
