@@ -40,14 +40,13 @@ const Home: React.FC = () => {
     handleGet();
   }, [size]);
 
-  //api call only with two or zero letters on input
   useEffect(() => {
-    if (text.length >= 2 || text.length <= 0) {
+    if (text.length >= 1 || text.length === 0) {
       setSize(20);
 
       const timer = setTimeout(() => {
         handleGet();
-      }, 300); //delay the search to wait for the user stop typing
+      }, 200); //delay the search to wait for the user stop typing
 
       return () => clearTimeout(timer);
     }
