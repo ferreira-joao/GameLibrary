@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Container, DetailsBody, GameDetails } from "./styles";
 import { renderIconNav } from "../../utils/renderIconNav";
 import Header from "../../components/Header";
 import PhotoSwiper from "../../components/PhotoSwiper";
+import { useParams } from "react-router-dom";
 
 const Details: React.FC = () => {
   const platforms = [
@@ -17,6 +18,12 @@ const Details: React.FC = () => {
     "linux",
     "atari",
   ];
+
+  const { id } = useParams();
+
+  useEffect(() => {
+    console.log(id);
+  }, []);
 
   return (
     <Container>

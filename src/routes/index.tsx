@@ -10,7 +10,7 @@ export default function Router() {
       <Routes>
         <Route path="/" element={<Welcome />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/details" element={<Details />} />
+        <Route path="/details/:id" element={<Details />} />
       </Routes>
       <GlobalStyle />
     </BrowserRouter>

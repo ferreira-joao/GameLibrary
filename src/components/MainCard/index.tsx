@@ -52,7 +52,7 @@ const MainCard: React.FC<ICardData> = ({
           <Meta score={metacritic}>{metacritic}</Meta>
         </div>
 
-        <Link to={"/details"} style={{ textDecoration: "none" }}>
+        <Link to={`/details/${itemId}`} style={{ textDecoration: "none" }}>
           <h3>{name}</h3>
         </Link>
       </div>
