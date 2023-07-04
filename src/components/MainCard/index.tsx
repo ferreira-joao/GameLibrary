@@ -5,6 +5,7 @@ import moment from "moment";
 import { Link } from "react-router-dom";
 
 interface ICardData {
+  itemId: number;
   photo: string;
   platforms: { platform: { id: number; slug: string } }[];
   metacritic: number;
@@ -14,6 +15,7 @@ interface ICardData {
 }
 
 const MainCard: React.FC<ICardData> = ({
+  itemId,
   photo,
   platforms,
   metacritic,

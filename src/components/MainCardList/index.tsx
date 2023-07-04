@@ -19,6 +19,7 @@ const MainCardList: React.FC<IData> = ({ data }) => {
       {data.map((e, i) => (
         <MainCard
           key={i}
+          itemId={i}
           photo={e.background_image}
           platforms={e.parent_platforms}
           metacritic={e.metacritic}
