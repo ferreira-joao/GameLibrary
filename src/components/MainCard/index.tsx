@@ -25,7 +25,15 @@ const MainCard: React.FC<ICardData> = ({
 
   return (
     <Container>
-      <img src={photo} className="photo" />
+      {photo ? (
+        <img src={photo} className="photo" />
+      ) : (
+        <div className="photo">
+          <p style={{ color: "#fff", fontWeight: "bold", textAlign: "center" }}>
+            NO IMAGE :(
+          </p>
+        </div>
+      )}
 
       <div className="information_container">
         <div className="icon_score">
