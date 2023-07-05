@@ -27,6 +27,12 @@ export const Container = styled.div`
 export const DetailsBody = styled.div`
   padding: 10px;
 
+  .details_loading {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
   .details_content {
     padding: 10px;
     border-radius: 20px;
