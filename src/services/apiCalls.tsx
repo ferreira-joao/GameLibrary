@@ -11,11 +11,11 @@ export const getGames = (search: string, size: number) => {
     .catch((err) => console.log(err));
 };
 
-export const getGameDetails = (id: number) => {
+export const getGameDetails = (id: string | undefined) => {
   return api
     .get(`/api/games/${id}?key=${env}`)
     .then((res) => {
-      return res.data.results;
+      return res.data;
     })
     .catch((err) => console.log(err));
 };
