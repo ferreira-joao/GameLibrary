@@ -7,6 +7,15 @@ import { useParams } from "react-router-dom";
 import LoadingSpinner from "../../components/LoadingSpinner";
 import { getGameDetails } from "../../services/apiCalls";
 
+interface IDetails {
+  parent_platforms: { platform: { id: number; slug: string } }[];
+  playtime: number;
+  name: string;
+  description_raw: string;
+  genres: { id: number; name: string }[];
+  platforms: { platform: { id: number; name: string; slug: string } }[];
+}
+
 const Details: React.FC = () => {
   const platforms = [
     "playstation",
@@ -23,7 +32,7 @@ const Details: React.FC = () => {
 
   const [loading, setLoading] = useState(true);
 
-  const [details, setDetails] = useState([]);
+  const [details, setDetails] = useState<IDetails>();
 
   const { id } = useParams();
 
@@ -38,10 +47,6 @@ const Details: React.FC = () => {
   useEffect(() => {
     handleDetails();
   }, [id]);
-
-  useEffect(() => {
-    console.log(details);
-  }, [details]);
 
   return (
     <Container>
@@ -60,37 +65,33 @@ const Details: React.FC = () => {
               </div>
 
               <div className="icon_container">
-                {platforms.map((e, i) => (
-                  <span key={i}>{renderIconNav(e)}</span>
+                {details?.parent_platforms.map((p, i) => (
+                  <span key={i}>{renderIconNav(p.platform.slug)}</span>
                 ))}
               </div>
 
-              <p className="playtime">average playtime: 72 hours</p>
+              <p className="playtime">average playtime: {details?.playtime}h</p>
             </div>
 
-            <h2>Grand Theft Auto</h2>
+            <h2>{details?.name}</h2>
 
             <PhotoSwiper />
 
             <GameDetails>
               <h3>About</h3>
 
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Asperiores dicta perspiciatis reprehenderit, soluta aut eos
-                tenetur sed debitis alias molestias corporis ex est temporibus
-                explicabo? Pariatur, neque. Illum, est dolorem?
-              </p>
+              <p>{details?.description_raw}</p>
             </GameDetails>
 
             <GameDetails>
               <h3>Genres</h3>
 
               <ul>
-                <li>Adventure</li>
-                <li>Action</li>
-                <li>Singleplayer</li>
-                <li>Atmospheric</li>
+                {details?.genres ? (
+                  details?.genres.map((g, i) => <li key={i}>{g.name}</li>)
+                ) : (
+                  <li>-</li>
+                )}
               </ul>
             </GameDetails>
 
@@ -98,10 +99,9 @@ const Details: React.FC = () => {
               <h3>Platforms</h3>
 
               <ul>
-                <li>Playstation 5</li>
-                <li>Xbox Series S/X</li>
-                <li>PC</li>
-                <li>Xbox 360</li>
+                {details?.platforms.map((p, i) => (
+                  <li key={i}>{p.platform.name}</li>
+                ))}
               </ul>
             </GameDetails>
 
