@@ -21,12 +21,12 @@ export const Container = styled.div`
   .photo {
     background-color: ${colors.darkblue};
     width: 100%;
-    height: 150px;
+    height: 180px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 
     @media ${breakpoint.sm} {
-      height: 180px;
+      height: 200px;
     }
   }
 
