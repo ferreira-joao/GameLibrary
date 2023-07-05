@@ -5,7 +5,7 @@ import Header from "../../components/Header";
 import PhotoSwiper from "../../components/PhotoSwiper";
 import { useParams } from "react-router-dom";
 import LoadingSpinner from "../../components/LoadingSpinner";
-import { getGameDetails } from "../../services/apiCalls";
+import { getGameDetails, getGameScreenshots } from "../../services/apiCalls";
 import moment from "moment";
 
 interface IDetails {
@@ -19,10 +19,17 @@ interface IDetails {
   ratings_count: number;
 }
 
+interface IScreenshots {
+  id: number;
+  image: string;
+}
+
 const Details: React.FC = () => {
   const [loading, setLoading] = useState(true);
 
   const [details, setDetails] = useState<IDetails>();
+
+  const [screenshots, setScreenshots] = useState<IScreenshots>();
 
   const { id } = useParams();
 
@@ -34,11 +41,22 @@ const Details: React.FC = () => {
     setLoading(false);
   };
 
+  const handleScreenshots = async () => {
+    const game_screenshots = await getGameScreenshots(id);
+
+    setScreenshots(game_screenshots);
+  };
+
   const release_date = moment(details?.released).format("ll");
 
   useEffect(() => {
     handleDetails();
+    handleScreenshots();
   }, [id]);
+
+  useEffect(() => {
+    console.log(screenshots);
+  }, [screenshots]);
 
   return (
     <Container>

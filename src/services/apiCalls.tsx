@@ -19,3 +19,12 @@ export const getGameDetails = (id: string | undefined) => {
     })
     .catch((err) => console.log(err));
 };
+
+export const getGameScreenshots = (id: string | undefined) => {
+  return api
+    .get(`/api/games/${id}/screenshots?key=${env}`)
+    .then((res) => {
+      return res.data.results;
+    })
+    .catch((err) => console.log(err));
+};
