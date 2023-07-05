@@ -1,9 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Container, DetailsBody, GameDetails } from "./styles";
 import { renderIconNav } from "../../utils/renderIconNav";
 import Header from "../../components/Header";
 import PhotoSwiper from "../../components/PhotoSwiper";
 import { useParams } from "react-router-dom";
+import LoadingSpinner from "../../components/LoadingSpinner";
+import { getGameDetails } from "../../services/apiCalls";
 
 const Details: React.FC = () => {
   const platforms = [
@@ -19,11 +21,27 @@ const Details: React.FC = () => {
     "atari",
   ];
 
+  const [loading, setLoading] = useState(true);
+
+  const [details, setDetails] = useState([]);
+
   const { id } = useParams();
 
+  const handleDetails = async () => {
+    const game_details = await getGameDetails(id);
+
+    setDetails(game_details);
+
+    setLoading(false);
+  };
+
   useEffect(() => {
-    console.log(id);
-  }, []);
+    handleDetails();
+  }, [id]);
+
+  useEffect(() => {
+    console.log(details);
+  }, [details]);
 
   return (
     <Container>
