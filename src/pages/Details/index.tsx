@@ -8,28 +8,17 @@ import LoadingSpinner from "../../components/LoadingSpinner";
 import { getGameDetails } from "../../services/apiCalls";
 
 interface IDetails {
+  released: string;
   parent_platforms: { platform: { id: number; slug: string } }[];
   playtime: number;
   name: string;
   description_raw: string;
   genres: { id: number; name: string }[];
   platforms: { platform: { id: number; name: string; slug: string } }[];
+  ratings_count: number;
 }
 
 const Details: React.FC = () => {
-  const platforms = [
-    "playstation",
-    "pc",
-    "nintendo",
-    "mac",
-    "xbox",
-    "android",
-    "ios",
-    "sega",
-    "linux",
-    "atari",
-  ];
-
   const [loading, setLoading] = useState(true);
 
   const [details, setDetails] = useState<IDetails>();
@@ -61,7 +50,7 @@ const Details: React.FC = () => {
           <div className="details_content">
             <div className="date_icons">
               <div className="date_container">
-                <p>oct 9, 2007</p>
+                <p>{details?.released}</p>
               </div>
 
               <div className="icon_container">
@@ -108,7 +97,7 @@ const Details: React.FC = () => {
             <GameDetails>
               <h3>Ratings</h3>
 
-              <p>Total: 50</p>
+              <p>Total: {details?.ratings_count}</p>
               <p>Exceptional: 50</p>
               <p>Recommended: 50</p>
               <p>Meh: 50</p>
