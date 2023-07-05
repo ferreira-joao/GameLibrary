@@ -5,7 +5,7 @@ import moment from "moment";
 import { Link } from "react-router-dom";
 
 interface ICardData {
-  itemId: number;
+  slug: string;
   photo: string;
   platforms: { platform: { id: number; slug: string } }[];
   metacritic: number;
@@ -15,7 +15,7 @@ interface ICardData {
 }
 
 const MainCard: React.FC<ICardData> = ({
-  itemId,
+  slug,
   photo,
   platforms,
   metacritic,
@@ -52,7 +52,7 @@ const MainCard: React.FC<ICardData> = ({
           <Meta score={metacritic}>{metacritic}</Meta>
         </div>
 
-        <Link to={`/details/${itemId}`} style={{ textDecoration: "none" }}>
+        <Link to={`/details/${slug}`} style={{ textDecoration: "none" }}>
           <h3>{name}</h3>
         </Link>
       </div>

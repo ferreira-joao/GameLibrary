@@ -8,6 +8,7 @@ interface IData {
     parent_platforms: { platform: { id: number; slug: string } }[];
     metacritic: number;
     name: string;
+    slug: string;
     released: string;
     genres: { id: number; name: string }[];
   }[];
@@ -19,7 +20,7 @@ const MainCardList: React.FC<IData> = ({ data }) => {
       {data.map((e, i) => (
         <MainCard
           key={i}
-          itemId={i}
+          slug={e.slug}
           photo={e.background_image}
           platforms={e.parent_platforms}
           metacritic={e.metacritic}
