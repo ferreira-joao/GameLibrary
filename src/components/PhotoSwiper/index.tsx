@@ -4,7 +4,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/scrollbar";
 import { Container } from "./styles";
-import { items } from "./data";
 
 interface IPhoto {
   source: { id: number; image: string }[] | undefined;
