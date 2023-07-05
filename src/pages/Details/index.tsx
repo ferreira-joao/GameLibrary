@@ -19,17 +19,12 @@ interface IDetails {
   ratings_count: number;
 }
 
-interface IScreenshots {
-  id: number;
-  image: string;
-}
-
 const Details: React.FC = () => {
   const [loading, setLoading] = useState(true);
 
   const [details, setDetails] = useState<IDetails>();
 
-  const [screenshots, setScreenshots] = useState<IScreenshots>();
+  const [screenshots, setScreenshots] = useState();
 
   const { id } = useParams();
 
@@ -85,7 +80,7 @@ const Details: React.FC = () => {
 
             <h2>{details?.name}</h2>
 
-            <PhotoSwiper />
+            <PhotoSwiper source={screenshots} />
 
             <GameDetails>
               <h3>About</h3>

@@ -6,7 +6,11 @@ import "swiper/css/scrollbar";
 import { Container } from "./styles";
 import { items } from "./data";
 
-const PhotoSwiper: React.FC = () => {
+interface IPhoto {
+  source: { id: number; image: string }[] | undefined;
+}
+
+const PhotoSwiper: React.FC<IPhoto> = ({ source }) => {
   return (
     <Swiper
       scrollbar={{
@@ -16,10 +20,10 @@ const PhotoSwiper: React.FC = () => {
       spaceBetween={20}
       style={{ padding: 10 }}
     >
-      {items.map((item, i) => (
+      {source?.map((s, i) => (
         <SwiperSlide key={i}>
           <Container>
-            <p>{item.name}</p>
+            <img src={s.image} className="photo" />
           </Container>
         </SwiperSlide>
       ))}
