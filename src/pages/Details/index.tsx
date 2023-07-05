@@ -6,6 +6,7 @@ import PhotoSwiper from "../../components/PhotoSwiper";
 import { useParams } from "react-router-dom";
 import LoadingSpinner from "../../components/LoadingSpinner";
 import { getGameDetails } from "../../services/apiCalls";
+import moment from "moment";
 
 interface IDetails {
   released: string;
@@ -33,6 +34,8 @@ const Details: React.FC = () => {
     setLoading(false);
   };
 
+  const release_date = moment(details?.released).format("ll");
+
   useEffect(() => {
     handleDetails();
   }, [id]);
@@ -50,7 +53,7 @@ const Details: React.FC = () => {
           <div className="details_content">
             <div className="date_icons">
               <div className="date_container">
-                <p>{details?.released}</p>
+                <p>{release_date}</p>
               </div>
 
               <div className="icon_container">
