@@ -1,5 +1,5 @@
 import React from "react";
-import { Scrollbar } from "swiper";
+import { Scrollbar, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/scrollbar";
@@ -15,9 +15,10 @@ const PhotoSwiper: React.FC<IPhoto> = ({ source }) => {
       scrollbar={{
         hide: true,
       }}
-      modules={[Scrollbar]}
+      modules={[Scrollbar, Autoplay]}
       spaceBetween={20}
       style={{ padding: 10 }}
+      autoplay={{ delay: 2500, disableOnInteraction: false }}
     >
       {source?.map((s, i) => (
         <SwiperSlide key={i}>
