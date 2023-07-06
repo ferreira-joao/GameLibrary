@@ -49,10 +49,6 @@ const Details: React.FC = () => {
     handleScreenshots();
   }, [id]);
 
-  useEffect(() => {
-    console.log(screenshots);
-  }, [screenshots]);
-
   return (
     <Container>
       <Header />
