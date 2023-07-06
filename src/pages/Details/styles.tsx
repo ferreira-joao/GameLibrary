@@ -115,6 +115,5 @@ export const PlatformList = styled.ul`
     border-radius: 8px;
     font-weight: bold;
     padding: 4px;
-    margin: auto;
   }
 `;
