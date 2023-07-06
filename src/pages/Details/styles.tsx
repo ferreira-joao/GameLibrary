@@ -32,7 +32,7 @@ export const DetailsBody = styled.div`
   }
 
   @media ${breakpoint.lg} {
-    padding: 10px 500px;
+    padding: 10px 200px;
   }
 
   .details_loading {
