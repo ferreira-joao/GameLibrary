@@ -53,8 +53,12 @@ export const DetailsBody = styled.div`
       background-color: #f2f2f2;
 
       p {
-        font-size: 14px;
+        font-size: 13px;
         text-transform: uppercase;
+
+        @media ${breakpoint.lg} {
+          font-size: 16px;
+        }
       }
     }
 
@@ -66,8 +70,14 @@ export const DetailsBody = styled.div`
     }
 
     .playtime {
+      font-size: 13px;
+      font-weight: bold;
       color: ${colors.primary};
       text-transform: uppercase;
+
+      @media ${breakpoint.lg} {
+        font-size: 16px;
+      }
     }
 
     h2 {
@@ -89,6 +99,10 @@ export const GameDetails = styled.div`
     line-height: 19.5px;
     font-size: 13px;
     color: ${colors.text};
+
+    @media ${breakpoint.lg} {
+      font-size: 16px;
+    }
   }
 
   ul {
@@ -98,6 +112,10 @@ export const GameDetails = styled.div`
   li {
     font-size: 14px;
     color: ${colors.text};
+
+    @media ${breakpoint.lg} {
+      font-size: 16px;
+    }
   }
 `;
 
@@ -121,7 +139,12 @@ export const PlatformList = styled.ul`
     background-color: ${colors.secondary};
     border: 2px solid ${colors.primary};
     border-radius: 8px;
+    font-size: 13px;
     font-weight: bold;
     padding: 4px;
+
+    @media ${breakpoint.lg} {
+      font-size: 16px;
+    }
   }
 `;
