@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors } from "../../global/theme";
+import { breakpoint, colors } from "../../global/theme";
 
 export const Container = styled.div`
   .details_header {
@@ -26,6 +26,14 @@ export const Container = styled.div`
 
 export const DetailsBody = styled.div`
   padding: 10px;
+
+  @media ${breakpoint.md} {
+    padding: 10px 100px;
+  }
+
+  @media ${breakpoint.lg} {
+    padding: 10px 500px;
+  }
 
   .details_loading {
     width: 100%;

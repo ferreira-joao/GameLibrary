@@ -7,6 +7,18 @@ export const Container = styled.div`
   border-radius: 10px;
   background-color: ${colors.darkblue};
 
+  @media ${breakpoint.sm} {
+    height: 200px;
+  }
+
+  @media ${breakpoint.md} {
+    height: 250px;
+  }
+
+  @media ${breakpoint.lg} {
+    height: 400px;
+  }
+
   .photo {
     background-color: ${colors.darkblue};
     width: 100%;
@@ -14,7 +26,15 @@ export const Container = styled.div`
     border-radius: 10px;
 
     @media ${breakpoint.sm} {
-      height: 180px;
+      height: 200px;
+    }
+
+    @media ${breakpoint.md} {
+      height: 250px;
+    }
+
+    @media ${breakpoint.lg} {
+      height: 400px;
     }
   }
 
