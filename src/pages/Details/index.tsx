@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Container, DetailsBody, GameDetails } from "./styles";
+import { Container, DetailsBody, GameDetails, ShowMore } from "./styles";
 import { renderIconNav } from "../../utils/renderIconNav";
 import Header from "../../components/Header";
 import PhotoSwiper from "../../components/PhotoSwiper";
@@ -26,6 +26,8 @@ const Details: React.FC = () => {
 
   const [screenshots, setScreenshots] = useState();
 
+  const [showMore, setShowMore] = useState(false);
+
   const { id } = useParams();
 
   const handleDetails = async () => {
@@ -43,6 +45,8 @@ const Details: React.FC = () => {
   };
 
   const release_date = moment(details?.released).format("ll");
+
+  const about = details?.description_raw;
 
   useEffect(() => {
     handleDetails();
@@ -81,7 +85,12 @@ const Details: React.FC = () => {
             <GameDetails>
               <h3>About</h3>
 
-              <p>{details?.description_raw}</p>
+              <p>
+                {showMore ? about : about?.substring(0, 300)}
+                <ShowMore onClick={() => setShowMore(!showMore)}>
+                  {showMore ? "Show less" : "Read more"}
+                </ShowMore>
+              </p>
             </GameDetails>
 
             <GameDetails>

@@ -92,3 +92,13 @@ export const GameDetails = styled.div`
     color: ${colors.text};
   }
 `;
+
+export const ShowMore = styled.span`
+  margin: 8px;
+  color: ${colors.primary};
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
