@@ -94,11 +94,27 @@ export const GameDetails = styled.div`
 `;
 
 export const ShowMore = styled.span`
-  margin: 8px;
+  margin: 5px;
   color: ${colors.primary};
   cursor: pointer;
 
   &:hover {
     text-decoration: underline;
+  }
+`;
+
+export const PlatformList = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+
+  li {
+    color: ${colors.primary};
+    background-color: ${colors.secondary};
+    border: 2px solid ${colors.primary};
+    border-radius: 8px;
+    font-weight: bold;
+    padding: 4px;
+    margin: auto;
   }
 `;

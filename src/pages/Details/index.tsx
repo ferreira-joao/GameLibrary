@@ -1,5 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { Container, DetailsBody, GameDetails, ShowMore } from "./styles";
+import {
+  Container,
+  DetailsBody,
+  GameDetails,
+  ShowMore,
+  PlatformList,
+} from "./styles";
 import { renderIconNav } from "../../utils/renderIconNav";
 import Header from "../../components/Header";
 import PhotoSwiper from "../../components/PhotoSwiper";
@@ -108,11 +114,11 @@ const Details: React.FC = () => {
             <GameDetails>
               <h3>Platforms</h3>
 
-              <ul>
+              <PlatformList>
                 {details?.platforms.map((p, i) => (
                   <li key={i}>{p.platform.name}</li>
                 ))}
-              </ul>
+              </PlatformList>
             </GameDetails>
 
             <GameDetails>

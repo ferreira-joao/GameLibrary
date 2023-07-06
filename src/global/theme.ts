@@ -20,6 +20,7 @@ export const breakpoint = {
 
 export const colors = {
   primary: "#be276e",
+  secondary: "#eeaaca",
   darkblue: "#00001a",
   background_second: "#262626",
   text: "#fff",
