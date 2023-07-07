@@ -5,6 +5,7 @@ import {
   GameDetails,
   ShowMore,
   PlatformList,
+  RatingContainer,
 } from "./styles";
 import { renderIconNav } from "../../utils/renderIconNav";
 import Header from "../../components/Header";
@@ -125,7 +126,11 @@ const Details: React.FC = () => {
             <GameDetails>
               <h3>Ratings</h3>
 
-              <RatingChart />
+              <RatingContainer>
+                <div className="rating_chart">
+                  <RatingChart />
+                </div>
+              </RatingContainer>
             </GameDetails>
           </div>
         )}

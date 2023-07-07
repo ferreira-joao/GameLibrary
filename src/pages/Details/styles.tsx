@@ -148,3 +148,18 @@ export const PlatformList = styled.ul`
     }
   }
 `;
+
+export const RatingContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .rating_chart {
+    width: 100%;
+
+    @media ${breakpoint.lg} {
+      width: 50%;
+    }
+  }
+`;
