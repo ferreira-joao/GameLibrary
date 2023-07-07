@@ -24,7 +24,7 @@ interface IDetails {
   description_raw: string;
   genres: { id: number; name: string }[];
   platforms: { platform: { id: number; name: string; slug: string } }[];
-  ratings_count: number;
+  ratings: { id: number; title: string; count: number }[];
 }
 
 const Details: React.FC = () => {
@@ -35,6 +35,8 @@ const Details: React.FC = () => {
   const [screenshots, setScreenshots] = useState();
 
   const [showMore, setShowMore] = useState(false);
+
+  const [loadingRates, setLoadingRates] = useState(false);
 
   const { id } = useParams();
 
@@ -52,6 +54,10 @@ const Details: React.FC = () => {
     setScreenshots(game_screenshots);
   };
 
+  const handleRates = () => {
+    details?.ratings.forEach((e) => console.log(e.count));
+  };
+
   const release_date = moment(details?.released).format("ll");
 
   const about = details?.description_raw;
@@ -60,6 +66,10 @@ const Details: React.FC = () => {
     handleDetails();
     handleScreenshots();
   }, [id]);
+
+  useEffect(() => {
+    handleRates();
+  }, [details]);
 
   return (
     <Container>
@@ -127,9 +137,13 @@ const Details: React.FC = () => {
               <h3>Ratings</h3>
 
               <RatingContainer>
-                <div className="rating_chart">
-                  <RatingChart />
-                </div>
+                {loadingRates ? (
+                  <LoadingSpinner size={50} color={"#FFF"} />
+                ) : (
+                  <div className="rating_chart">
+                    <RatingChart />
+                  </div>
+                )}
               </RatingContainer>
             </GameDetails>
           </div>
