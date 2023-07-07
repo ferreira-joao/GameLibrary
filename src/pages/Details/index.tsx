@@ -123,12 +123,6 @@ const Details: React.FC = () => {
 
             <GameDetails>
               <h3>Ratings</h3>
-
-              <p>Total: {details?.ratings_count}</p>
-              <p>Exceptional: 50</p>
-              <p>Recommended: 50</p>
-              <p>Meh: 50</p>
-              <p>Skip: 50</p>
             </GameDetails>
           </div>
         )}
