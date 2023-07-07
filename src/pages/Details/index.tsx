@@ -13,6 +13,7 @@ import { useParams } from "react-router-dom";
 import LoadingSpinner from "../../components/LoadingSpinner";
 import { getGameDetails, getGameScreenshots } from "../../services/apiCalls";
 import moment from "moment";
+import RatingChart from "../../components/RatingChart";
 
 interface IDetails {
   released: string;
@@ -123,6 +124,8 @@ const Details: React.FC = () => {
 
             <GameDetails>
               <h3>Ratings</h3>
+
+              <RatingChart />
             </GameDetails>
           </div>
         )}
