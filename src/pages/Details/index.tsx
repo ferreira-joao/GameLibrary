@@ -38,6 +38,8 @@ const Details: React.FC = () => {
 
   const [loadingRates, setLoadingRates] = useState(true);
 
+  const [ratingsArray, setRatingsArray] = useState<number[]>([]);
+
   const { id } = useParams();
 
   const handleDetails = async () => {
@@ -55,23 +57,26 @@ const Details: React.FC = () => {
   };
 
   const handleRates = () => {
+    let ratings_array: number[] = [];
+
     details?.ratings.forEach((e) => {
       switch (e.title) {
         case "exceptional":
-          console.log("ex: " + e.count);
+          ratings_array.push(e.count);
           break;
         case "recommended":
-          console.log("rec: " + e.count);
+          ratings_array.push(e.count);
           break;
         case "meh":
-          console.log("meh: " + e.count);
+          ratings_array.push(e.count);
           break;
         case "skip":
-          console.log("skip: " + e.count);
+          ratings_array.push(e.count);
           break;
       }
     });
 
+    setRatingsArray(ratings_array);
     setLoadingRates(false);
   };
 
@@ -158,7 +163,13 @@ const Details: React.FC = () => {
                   <LoadingSpinner size={50} color={"#FFF"} />
                 ) : (
                   <div className="rating_chart">
-                    <RatingChart />
+                    {ratingsArray.length > 0 ? (
+                      <RatingChart ratings={ratingsArray} />
+                    ) : (
+                      <h3 style={{ color: "#FFF", textAlign: "center" }}>
+                        This game does not have ratings :(
+                      </h3>
+                    )}
                   </div>
                 )}
               </RatingContainer>
