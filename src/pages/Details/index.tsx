@@ -38,6 +38,8 @@ const Details: React.FC = () => {
 
   const [loadingRates, setLoadingRates] = useState(true);
 
+  const [pageTitle, setPageTitle] = useState<string | undefined>("");
+
   const [ratingsArray, setRatingsArray] = useState<number[]>([]);
 
   const { id } = useParams();
@@ -91,6 +93,12 @@ const Details: React.FC = () => {
 
   useEffect(() => {
     handleRates();
+  }, [details]);
+
+  useEffect(() => {
+    details?.name
+      ? (document.title = "GameLibrary - " + details?.name)
+      : (document.title = "GameLibrary");
   }, [details]);
 
   return (
