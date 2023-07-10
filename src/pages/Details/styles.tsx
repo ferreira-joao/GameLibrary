@@ -154,8 +154,6 @@ export const RatingContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: #151515;
-  border-radius: 8px; */
 
   .rating_chart {
     width: 100%;
