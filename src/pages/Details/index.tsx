@@ -177,7 +177,7 @@ const Details: React.FC = () => {
                       <RatingChart ratings={ratingsArray} />
                     ) : (
                       <h3 style={{ color: "#FFF", textAlign: "center" }}>
-                        This game does not have ratings :(
+                        This game do not have any ratings :(
                       </h3>
                     )}
                   </div>
