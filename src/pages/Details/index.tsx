@@ -36,7 +36,7 @@ const Details: React.FC = () => {
 
   const [showMore, setShowMore] = useState(false);
 
-  const [loadingRates, setLoadingRates] = useState(false);
+  const [loadingRates, setLoadingRates] = useState(true);
 
   const { id } = useParams();
 
@@ -55,7 +55,24 @@ const Details: React.FC = () => {
   };
 
   const handleRates = () => {
-    details?.ratings.forEach((e) => console.log(e.count));
+    details?.ratings.forEach((e) => {
+      switch (e.title) {
+        case "exceptional":
+          console.log("ex: " + e.count);
+          break;
+        case "recommended":
+          console.log("rec: " + e.count);
+          break;
+        case "meh":
+          console.log("meh: " + e.count);
+          break;
+        case "skip":
+          console.log("skip: " + e.count);
+          break;
+      }
+    });
+
+    setLoadingRates(false);
   };
 
   const release_date = moment(details?.released).format("ll");
