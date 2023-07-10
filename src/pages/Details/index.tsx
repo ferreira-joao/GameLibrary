@@ -131,12 +131,16 @@ const Details: React.FC = () => {
             <GameDetails>
               <h3>About</h3>
 
-              <p>
-                {showMore ? about : about?.substring(0, 300)}
-                <ShowMore onClick={() => setShowMore(!showMore)}>
-                  {showMore ? "Show less" : "Read more"}
-                </ShowMore>
-              </p>
+              {about ? (
+                <p>
+                  {showMore ? about : about?.substring(0, 300)}
+                  <ShowMore onClick={() => setShowMore(!showMore)}>
+                    {showMore ? "Show less" : "Read more"}
+                  </ShowMore>
+                </p>
+              ) : (
+                <h3 style={{ color: "#FFF" }}>No description :(</h3>
+              )}
             </GameDetails>
 
             <GameDetails>
