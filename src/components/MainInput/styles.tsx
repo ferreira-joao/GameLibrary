@@ -26,4 +26,12 @@ export const Container = styled.div`
   input:focus {
     box-shadow: rgba(190, 39, 110, 1) 0px 3px 8px;
   }
+
+  .icon_container_close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 30px;
+  }
 `;

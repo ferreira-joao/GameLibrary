@@ -1,6 +1,8 @@
 import React from "react";
 import { Container } from "./styles";
 import { RiSearch2Line } from "react-icons/ri";
+import { AiOutlineClose } from "react-icons/ai";
+import { useSearchContext } from "../../context/searchText";
 
 interface IMainInput {
   value: string;
@@ -8,6 +10,8 @@ interface IMainInput {
 }
 
 const MainInput: React.FC<IMainInput> = ({ value, change }) => {
+  const { searchText, setSearchText } = useSearchContext();
+
   return (
     <Container>
       <div className="icon_container">
@@ -20,6 +24,18 @@ const MainInput: React.FC<IMainInput> = ({ value, change }) => {
         value={value}
         onChange={(e) => change(e.target.value)}
       />
+
+      <div className="icon_container_close">
+        {searchText ? (
+          <AiOutlineClose
+            size={20}
+            style={{ color: "#ff1a1a", cursor: "pointer" }}
+            onClick={() => setSearchText("")}
+          />
+        ) : (
+          <AiOutlineClose size={20} style={{ color: "#ccc" }} />
+        )}
+      </div>
     </Container>
   );
 };
