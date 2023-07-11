@@ -5,6 +5,7 @@ import MainInput from "../../components/MainInput";
 import MainCardList from "../../components/MainCardList";
 import { getGames } from "../../services/apiCalls";
 import LoadingSpinner from "../../components/LoadingSpinner";
+import { useSearchContext } from "../../context/searchText";
 
 const Home: React.FC = () => {
   const [games, setGames] = useState<[]>([]);
@@ -36,6 +37,8 @@ const Home: React.FC = () => {
     setText(e);
   };
 
+  const { searchText, setSearchText } = useSearchContext();
+
   useEffect(() => {
     handleGet();
   }, [size]);
@@ -51,6 +54,10 @@ const Home: React.FC = () => {
       return () => clearTimeout(timer);
     }
   }, [text]);
+
+  useEffect(() => {
+    console.log(searchText);
+  }, []);
 
   return (
     <Container>
