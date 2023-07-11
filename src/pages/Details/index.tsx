@@ -40,6 +40,8 @@ const Details: React.FC = () => {
 
   const [ratingsArray, setRatingsArray] = useState<number[]>([]);
 
+  const [ratingsTitle, setRatingsTitle] = useState<string[]>([]);
+
   const { id } = useParams();
 
   const handleDetails = async () => {
@@ -57,25 +59,31 @@ const Details: React.FC = () => {
   };
 
   const handleRates = () => {
+    let ratings_title: string[] = [];
     let ratings_array: number[] = [];
 
     details?.ratings.forEach((e) => {
       switch (e.title) {
         case "exceptional":
+          ratings_title.push(e.title);
           ratings_array.push(e.count);
           break;
         case "recommended":
+          ratings_title.push(e.title);
           ratings_array.push(e.count);
           break;
         case "meh":
+          ratings_title.push(e.title);
           ratings_array.push(e.count);
           break;
         case "skip":
+          ratings_title.push(e.title);
           ratings_array.push(e.count);
           break;
       }
     });
 
+    setRatingsTitle(ratings_title);
     setRatingsArray(ratings_array);
     setLoadingRates(false);
   };
@@ -174,7 +182,10 @@ const Details: React.FC = () => {
                 ) : (
                   <div className="rating_chart">
                     {ratingsArray.length > 0 ? (
-                      <RatingChart ratings={ratingsArray} />
+                      <RatingChart
+                        titles={ratingsTitle}
+                        ratings={ratingsArray}
+                      />
                     ) : (
                       <h3 style={{ color: "#FFF", textAlign: "center" }}>
                         This game do not have any ratings :(
