@@ -68,7 +68,7 @@ const Home: React.FC = () => {
           </div>
 
           {games.length === 0 ? (
-            <h3 className="zero_games">NO GAMES FOUND :(</h3>
+            <h3 className="zero_games">NO GAMES WERE FOUND :(</h3>
           ) : (
             <div className="list_body">
               <MainCardList data={games} />
