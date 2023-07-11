@@ -16,7 +16,7 @@ export function useSearchContext() {
 }
 
 export function SearchContextProvider({ children }: ISearchContextProps) {
-  const [searchText, setSearchText] = useState("a");
+  const [searchText, setSearchText] = useState("");
 
   return (
     <SearchContext.Provider value={{ searchText, setSearchText }}>

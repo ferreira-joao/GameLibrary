@@ -14,14 +14,12 @@ const Home: React.FC = () => {
 
   const [loadingButton, setLoadingButton] = useState(false);
 
-  const [text, setText] = useState("");
-
   const [size, setSize] = useState(20);
 
   const handleGet = async () => {
     setLoadingButton(true);
 
-    const games = await getGames(text, size);
+    const games = await getGames(searchText, size);
 
     setGames(games);
 
@@ -34,7 +32,7 @@ const Home: React.FC = () => {
   };
 
   const handleChange = (e: string) => {
-    setText(e);
+    setSearchText(e);
   };
 
   const { searchText, setSearchText } = useSearchContext();
@@ -44,7 +42,7 @@ const Home: React.FC = () => {
   }, [size]);
 
   useEffect(() => {
-    if (text.length >= 1 || text.length === 0) {
+    if (searchText.length >= 1 || searchText.length === 0) {
       setSize(20);
 
       const timer = setTimeout(() => {
@@ -53,11 +51,7 @@ const Home: React.FC = () => {
 
       return () => clearTimeout(timer);
     }
-  }, [text]);
-
-  useEffect(() => {
-    console.log(searchText);
-  }, []);
+  }, [searchText]);
 
   return (
     <Container>
@@ -70,7 +64,7 @@ const Home: React.FC = () => {
       ) : (
         <>
           <div className="input_container">
-            <MainInput value={text} change={(e) => handleChange(e)} />
+            <MainInput value={searchText} change={(e) => handleChange(e)} />
           </div>
 
           {games.length === 0 ? (
