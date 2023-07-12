@@ -14,12 +14,13 @@ const Home: React.FC = () => {
 
   const [loadingButton, setLoadingButton] = useState(false);
 
-  const [size, setSize] = useState(20);
+  const { searchText, setSearchText, searchSize, setSearchSize } =
+    useSearchContext();
 
   const handleGet = async () => {
     setLoadingButton(true);
 
-    const games = await getGames(searchText, size);
+    const games = await getGames(searchText, searchSize);
 
     setGames(games);
 
@@ -28,22 +29,20 @@ const Home: React.FC = () => {
   };
 
   const handleGetMore = () => {
-    setSize(size + 5);
+    setSearchSize(searchSize + 5);
   };
 
   const handleChange = (e: string) => {
     setSearchText(e);
   };
 
-  const { searchText, setSearchText } = useSearchContext();
-
   useEffect(() => {
     handleGet();
-  }, [size]);
+  }, [searchSize]);
 
   useEffect(() => {
     if (searchText.length >= 1 || searchText.length === 0) {
-      setSize(20);
+      setSearchSize(20);
 
       const timer = setTimeout(() => {
         handleGet();
