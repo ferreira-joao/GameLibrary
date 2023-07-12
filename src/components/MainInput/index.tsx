@@ -14,27 +14,29 @@ const MainInput: React.FC<IMainInput> = ({ value, change }) => {
 
   return (
     <Container>
-      <div className="icon_container">
-        <RiSearch2Line size={20} style={{ color: "#FFF" }} />
-      </div>
+      <div className="input_content">
+        <div className="icon_container">
+          <RiSearch2Line size={20} style={{ color: "#FFF" }} />
+        </div>
 
-      <input
-        type="text"
-        placeholder="Search a game..."
-        value={value}
-        onChange={(e) => change(e.target.value)}
-      />
+        <input
+          type="text"
+          placeholder="Search a game..."
+          value={value}
+          onChange={(e) => change(e.target.value)}
+        />
 
-      <div className="icon_container_close">
-        {searchText ? (
-          <AiOutlineClose
-            size={20}
-            style={{ color: "#ff1a1a", cursor: "pointer" }}
-            onClick={() => setSearchText("")}
-          />
-        ) : (
-          <AiOutlineClose size={20} style={{ color: "#ccc" }} />
-        )}
+        <div className="icon_container_close">
+          {searchText ? (
+            <AiOutlineClose
+              size={20}
+              style={{ color: "#ff1a1a", cursor: "pointer" }}
+              onClick={() => setSearchText("")}
+            />
+          ) : (
+            <AiOutlineClose size={20} style={{ color: "#ccc" }} />
+          )}
+        </div>
       </div>
     </Container>
   );
