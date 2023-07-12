@@ -5,7 +5,7 @@ import MainInput from "../../components/MainInput";
 import MainCardList from "../../components/MainCardList";
 import { getGames } from "../../services/apiCalls";
 import LoadingSpinner from "../../components/LoadingSpinner";
-import { useSearchContext } from "../../context/searchText";
+import { useSearchContext } from "../../context/searchContext";
 
 const Home: React.FC = () => {
   const [games, setGames] = useState<[]>([]);

@@ -3,7 +3,7 @@ import Welcome from "../pages/Welcome";
 import Home from "../pages/Home";
 import Details from "../pages/Details";
 import GlobalStyle from "../global/globalStyles";
-import { SearchContextProvider } from "../context/searchText";
+import { SearchContextProvider } from "../context/searchContext";
 
 export default function Router() {
   return (

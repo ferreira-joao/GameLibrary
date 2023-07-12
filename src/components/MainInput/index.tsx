@@ -2,7 +2,7 @@ import React from "react";
 import { Container } from "./styles";
 import { RiSearch2Line } from "react-icons/ri";
 import { AiOutlineClose } from "react-icons/ai";
-import { useSearchContext } from "../../context/searchText";
+import { useSearchContext } from "../../context/searchContext";
 
 interface IMainInput {
   value: string;
