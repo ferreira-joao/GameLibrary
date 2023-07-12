@@ -3,17 +3,20 @@ import { breakpoint, colors } from "../../global/theme";
 
 export const Container = styled.div`
   display: flex;
-  align-items: center;
 
   .icon_container {
-    padding: 7.5px;
+    min-width: 40px;
+    padding: 8px;
     border-radius: 8px 0 0 8px;
     background-color: ${colors.primary};
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   input {
     width: 100%;
-    padding: 10px;
+    padding: 8px;
     border: 1px solid #eee;
     border-radius: 0 8px 8px 0;
     transition: 0.2s;
