@@ -62,7 +62,7 @@ export const Container = styled.div`
 
 export const MainButton = styled.button`
   width: 100%;
-  padding: 16px;
+  padding: 8px;
   font-size: 16px;
   border-radius: 20px;
   margin-top: 16px;
@@ -74,5 +74,9 @@ export const MainButton = styled.button`
 
   &:hover {
     opacity: 0.5;
+  }
+
+  @media ${breakpoint.lg} {
+    padding: 16px;
   }
 `;
