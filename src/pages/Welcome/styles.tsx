@@ -8,7 +8,6 @@ export const Container = styled.div`
 
   @media ${breakpoint.lg} {
     display: flex;
-    flex-direction: row;
     padding-left: 40px;
   }
 

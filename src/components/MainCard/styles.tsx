@@ -68,7 +68,6 @@ export const Container = styled.div`
       padding-bottom: 5px;
       border-bottom: 1px solid #fff;
       display: flex;
-      flex-direction: row;
       justify-content: space-between;
     }
 
@@ -78,13 +77,11 @@ export const Container = styled.div`
       padding-bottom: 5px;
       border-bottom: 1px solid #fff;
       display: flex;
-      flex-direction: row;
       justify-content: space-between;
 
       .genre_container {
         margin-left: 10px;
         display: flex;
-        flex-direction: row;
         gap: 5px;
         flex-wrap: wrap;
       }
