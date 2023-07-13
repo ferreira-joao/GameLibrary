@@ -79,7 +79,7 @@ export const Container = styled.div`
       display: flex;
       justify-content: space-between;
 
-      .genre_container {
+      .genres_container {
         margin-left: 10px;
         display: flex;
         gap: 5px;

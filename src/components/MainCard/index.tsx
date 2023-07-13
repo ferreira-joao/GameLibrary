@@ -68,7 +68,7 @@ const MainCard: React.FC<ICardData> = ({
           <div className="genres">
             <p>Genres:</p>
 
-            <div className="genre_container">
+            <div className="genres_container">
               {genres ? (
                 genres.map((e, i) => <p key={i}>{e.name}</p>)
               ) : (
