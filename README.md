@@ -28,3 +28,4 @@ Start with:
 ```
 yarn dev
 ```
+![game_library](https://github.com/ferreira-joao/GameLibrary/assets/61431659/7d4e39d5-6cd1-40bf-9a4f-d9cc2f796406)
