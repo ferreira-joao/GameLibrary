@@ -16,7 +16,7 @@ export const Container = styled.div`
   }
 
   @media ${breakpoint.lg} {
-    height: 500px;
+    height: 600px;
   }
 
   .photo {

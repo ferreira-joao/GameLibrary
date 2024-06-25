@@ -23,7 +23,7 @@ const PhotoSwiper: React.FC<IPhoto> = ({ source }) => {
       {source?.map((s, i) => (
         <SwiperSlide key={i}>
           <Container>
-            <img src={s.image} className="photo" />
+            <img src={s.image} className="photo" style={{ height: "100%" }} />
           </Container>
         </SwiperSlide>
       ))}
