@@ -28,6 +28,7 @@ Start with:
 ```
 yarn dev
 ```
+## Gallery
 ![gamelibrary1](https://github.com/user-attachments/assets/1f29d809-ce3a-4e2b-9626-15eaa67a62e7)
 
 ![game_library](https://github.com/ferreira-joao/GameLibrary/assets/61431659/7d4e39d5-6cd1-40bf-9a4f-d9cc2f796406)
